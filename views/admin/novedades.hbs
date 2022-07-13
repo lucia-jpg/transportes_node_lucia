@@ -1,2 +1,47 @@
-<h1>Hola soy la página de novedades</h1>
-<h2>Bienvenido {{persona}}</h2>
+<div class="container margenes">
+    <div class="row">
+        <div class="col">
+            <p class="text-end">Hola{{persona}} !<a href= "" class="btn btn-danger">Cerrar sesión</a></p>
+        </div>
+       
+
+</div>
+
+<div class="row">
+    <div class="col-7">
+        <h2>Listado Novedades</h2>
+    </div>
+    <div class="col-5 text-end">
+        <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fa-solid fa-plus"></i>Nuevo</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {{#each novedades}}
+
+                <tr>
+                    <th scope="row">{{id}}</th>
+                    <td>{{titulo}}</td>
+
+                    <td class="text-end">
+                        <a href="" class="btn btn-secondary"><i class="fa-solid fa-pencil"></i></a>
+                        <a href="" class="btn btn-secondary"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                </tr>
+
+                {{/each}}
+            </tbody>
+        </table>
+
+    </div>
+</div>
