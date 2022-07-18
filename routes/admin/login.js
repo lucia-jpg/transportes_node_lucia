@@ -8,6 +8,13 @@ router.get('/', function(req,res,next){
     });
 });
 
+router.get('/logout', function(req,res,next){
+    req.session.destroy(); //destruye el id, nombre...todo
+    res.render('admin/login',{
+        layout:'admin/layout'
+    })
+})
+
 router.post('/', async function(req,res,next){
 
 try{
